@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addition(int i, int j){
-        float result = i + j;
+        int result = i + j;
         Toast.makeText(this, "Result: " + result, Toast.LENGTH_SHORT).show();
     }
 
