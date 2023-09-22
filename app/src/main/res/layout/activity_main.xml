@@ -7,12 +7,96 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Calculator"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.219" />
+
+    <EditText
+        android:id="@+id/firstNum"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/secondNum"
+        android:hint="@string/enter_your_first_number"
+        android:textSize="20sp"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:id="@+id/secondNum"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/firstNum"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Enter your second number:"
+        android:textSize="20sp"
+        android:inputType="number"
+        />
+
+    <TableLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/secondNum"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        >
+        <TableRow
+            >
+            <Button
+                android:id="@+id/plus"
+                android:text="@string/plus"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="2.5dp"
+                android:layout_marginStart="17dp"
+                android:onClick="Onclick1"
+                />
+            <Button
+                android:id="@+id/minus"
+                android:text="@string/minus"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginRight="2.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:onClick="Onclick2"
+                />
+            <Button
+                android:id="@+id/multiplication"
+                android:text="@string/multiplication"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginRight="2.5dp"
+                android:layout_marginLeft="2.5dp"
+                android:onClick="Onclick3"
+                />
+            <Button
+                android:id="@+id/division"
+                android:text="@string/division"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="2.5dp"
+                android:onClick="Onclick4"
+                />
+        </TableRow>
+    </TableLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
