@@ -41,7 +41,7 @@
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:hint="Enter your second number:"
+        android:hint="@string/enter_your_second_number"
         android:textSize="20sp"
         android:inputType="number"
         />
@@ -91,8 +91,8 @@
                 android:text="@string/division"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="2.5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="2.5dp"
                 android:onClick="Onclick4"
                 />
         </TableRow>
